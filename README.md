@@ -1,7 +1,12 @@
 # hsa-11-es
+Раніще не працював з ES, тому трішки було складнувати - не до кінця зробив так як вимагалось в домашньому завданні, але вдалось погратись з ES \
+Додаток не створював, вигрузив записив за допомогою бклк реквесту і інті шапити також надсилав з постамана
+## Bulk
+curl -XPOST localhost:9200/movies/_bulk -d
+
 ## fuzziness
 ```
-http://localhost:9200/first_index_search/_search
+http://localhost:9200/first_index_search_test/_search
 {
     "query": {
       "fuzzy": {
@@ -15,6 +20,7 @@ http://localhost:9200/first_index_search/_search
 ```
 ## N-gram
 ```
+PUT http://localhost:9200/movies3
 {
     "settings": {
             "analysis": {
